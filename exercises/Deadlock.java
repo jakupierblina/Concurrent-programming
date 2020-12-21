@@ -63,11 +63,9 @@ public class Deadlock
 
 		System.out.println("We managed to finish!");
 
-		/*
-			
+		/*			
 			Thread[t2,5,main] acquire java.util.concurrent.Semaphore@3e856472[Permits = 0]
 			Thread[t1,5,main] acquire java.util.concurrent.Semaphore@1da78047[Permits = 0]
-
 		*/
 	}
 }
