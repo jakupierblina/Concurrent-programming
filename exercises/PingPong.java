@@ -1,4 +1,4 @@
-public class PingPon extends Thread{
+public class PingPong implements Runnable{
 	
 
 	private String word;
@@ -25,12 +25,20 @@ public class PingPon extends Thread{
 	
 
 	public static void main(String [] args){
-		//polimorfizem
-		Thread t1 = new PingPon("Ping", 30);
+		//polimorfizem n runable method
+
+		PingPong ping = new PingPong("Ping", 30);
+		Runnable pong = new PingPong("Pong", 30);
+
+
+		PingPong t1 = new Thread(ping);
 		t1.start();
 
-		Thread t2 = new PingPon("Pong", 30);
+		Thread t2 = new Thread(pong);
 		t2.start();
+
+
+		
 
 	}
 }
